@@ -1,0 +1,84 @@
+cd path\to\your\project
+
+git init
+
+echo "# My Project" > README.md
+
+git add README.md
+
+git commit -m "Initial commit with README"
+
+git remote add origin https://github.com/your-username/your-repo-name.git
+
+git branch -M main
+
+git push -u origin main
+
+
+
+
+
+
+
+
+
+# Create and switch to new branch
+git checkout -b MITS
+
+# Make changes (example: add text to README)
+echo "This is MITS branch change" >> README.md
+
+# Add changes
+git add README.md
+
+# Commit changes
+git commit -m "Updated README in MITS branch"
+
+# Switch back to main branch
+git checkout main
+
+# Merge MITS into main
+git merge MITS
+
+# Push updated main branch to GitHub
+git push origin main
+
+
+
+
+
+
+
+cd path\to\your\project
+
+git init
+
+echo "Hello World" > file.txt
+git add file.txt
+git commit -m "First commit"
+
+echo "Second line" >> file.txt
+git add file.txt
+git commit -m "Second commit"
+
+git log
+
+git log --oneline
+
+git log --oneline --grep="Second"
+
+
+
+
+
+git --version
+cd Desktop
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+dir
+git status
+
+cd Desktop\my-project
+git add .
+git commit -m "My update"
+git push -u origin main
