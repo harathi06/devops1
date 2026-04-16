@@ -1,1 +1,63 @@
-im harathi here
+4th unit
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.edge.service import Service
+from selenium.webdriver.edge.options import Options
+import time
+options = Options()
+driver = webdriver.Edge(options=options)
+driver.get("https://www.google.com")
+time.sleep(50)
+search_box = driver.find_element(By.NAME, "q")
+print("Tag Name:", search_box.tag_name)
+print("Element Text:", search_box.text)
+print("Displayed:", search_box.is_displayed())
+print("Enabled:", search_box.is_enabled())
+print("Outer HTML:", search_box.get_attribute("outerHTML"))
+time.sleep(5)
+driver.quit() 
+
+
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+driver=webdriver.Edge()
+driver.get("https://www.google.com")
+search_box=driver.find_element(By.NAME,"q")
+print("Element found:",search_box)
+driver.quit()
+
+
+
+
+
+
+
+5th unit
+
+
+Create index.html
+<!DOCTYPE html>
+<html>
+<head>   
+  <title>Hello Docker</title>
+</head>
+<body>  
+  <h1>Hello, World!</h1>  
+  <p>This webpage is running inside a Docker container.</p>
+</body>
+</html>
+
+Create a file named Dockerfile
+
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html
+
+
+docker build -t hello-docker .
+docker run -d -p 8080:80 hello-docker
+Open your browser and go to:
+http://localhost:8080
+Output:
+Hello, World!This webpage is running inside a Docker container.
