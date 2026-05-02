@@ -71,3 +71,22 @@ print("Enabled:", search_box.is_enabled())
 print("Outer HTML:", search_box.get_attribute("outerHTML"))
 time.sleep(5)
 driver.quit()
+
+
+
+
+
+docker --version
+docker pull ubuntu
+docker images
+docker run ubuntu
+docker ps
+docker ps -a
+docker stop <container_id>
+docker rm <container_id>
+docker rmi ubuntu
+
+
+
+
+
